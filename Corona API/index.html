@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>COVID-19 Live Tracker</h1>
+        
+        <h2>Global Statistics</h2>
+        <div class="stats-container">
+            <div class="card cases">
+                <h3>Total Cases</h3>
+                <p id="global-cases">Loading...</p>
+            </div>
+            <div class="card deaths">
+                <h3>Total Deaths</h3>
+                <p id="global-deaths">Loading...</p>
+            </div>
+            <div class="card recovered">
+                <h3>Total Recovered</h3>
+                <p id="global-recovered">Loading...</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Search by Country</h2>
+        <div class="search-box">
+            <input type="text" id="country-input" placeholder="Enter country name (e.g., India)">
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div id="country-result" class="country-result hidden">
+            <h3 id="country-name">Country Name</h3>
+            <div class="stats-container">
+                <div class="card cases">
+                    <h4>Cases</h4>
+                    <p id="country-cases">-</p>
+                </div>
+                <div class="card deaths">
+                    <h4>Deaths</h4>
+                    <p id="country-deaths">-</p>
+                </div>
+                <div class="card recovered">
+                    <h4>Recovered</h4>
+                    <p id="country-recovered">-</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

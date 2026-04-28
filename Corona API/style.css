@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.card h3, .card h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Card Colors */
+.cases { background-color: #3498db; }
+.deaths { background-color: #e74c3c; }
+.recovered { background-color: #2ecc71; }
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #1a252f;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .stats-container {
+        flex-direction: column;
+    }
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
