@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo" onclick="switchView('home')">ShopZone</div>
+        
+        <div class="search-sort-container">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <select id="sortSelect">
+                <option value="default">Sort by Price</option>
+                <option value="low-high">Low to High</option>
+                <option value="high-low">High to Low</option>
+            </select>
+        </div>
+
+        <div class="nav-links">
+            <button class="nav-btn" onclick="switchView('admin')">Add Product</button>
+            <button class="nav-btn cart-btn" onclick="switchView('cart')">
+                Cart <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <main id="home-view" class="view-section">
+            <div id="product-container" class="product-grid">
+                </div>
+        </main>
+
+        <main id="admin-view" class="view-section" style="display: none;">
+            <div class="form-container">
+                <h2>Add New Product</h2>
+                <form id="addProductForm">
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" id="prodName" required placeholder="e.g., Wireless Mouse">
+                    </div>
+                    <div class="form-group">
+                        <label>Price (₹)</label>
+                        <input type="number" id="prodPrice" required min="1" placeholder="e.g., 500">
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL</label>
+                        <input type="url" id="prodImage" required placeholder="https://example.com/image.jpg">
+                    </div>
+                    <button type="submit" class="submit-btn">Save Product</button>
+                </form>
+            </div>
+        </main>
+
+        <main id="cart-view" class="view-section" style="display: none;">
+            <h2>Shopping Cart</h2>
+            <div class="cart-layout">
+                <div id="cart-container" class="cart-items">
+                    </div>
+                <div class="cart-summary">
+                    <h3>Price Details</h3>
+                    <hr>
+                    <div class="total-row">
+                        <span>Total Amount:</span>
+                        <span>₹<span id="cart-total">0</span></span>
+                    </div>
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
