@@ -33,9 +33,9 @@ function handleCellClick(event) {
 }
 
 function updateCell(cell, index) {
-    // Update our JavaScript array
+   
     board[index] = currentPlayer;
-    // Update the visual HTML board
+    
     cell.innerText = currentPlayer;
     cell.classList.add(currentPlayer.toLowerCase()); 
 }
