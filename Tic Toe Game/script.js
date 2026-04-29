@@ -21,7 +21,7 @@ const winningConditions = [
 
 function handleCellClick(event) {
     const clickedCell = event.target;
-    // Get the data-index we set in the HTML
+    
     const cellIndex = parseInt(clickedCell.getAttribute('data-index'));
 
     if (board[cellIndex] !== '' || !isGameActive) {
