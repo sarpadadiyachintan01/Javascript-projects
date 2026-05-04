@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Runner - Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+
+    <aside class="sidebar">
+        <h3>New Task</h3>
+        <div class="input-box">
+            <label>Title</label>
+            <input type="text" id="inpTitle" placeholder="Task name...">
+            
+            <label>Due Date</label>
+            <input type="date" id="inpDate">
+            
+            <label>Priority</label>
+            <select id="inpPriority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            
+            <label>Description</label>
+            <textarea id="inpDesc" rows="4"></textarea>
+            
+            <button id="saveTaskBtn">Save Task</button>
+        </div>
+    </aside>
+
+   
+    <main class="content">
+        <header class="top-bar">
+            <h2>My Tasks</h2>
+            <div class="search-box">
+                <input type="text" id="searchBar" placeholder="Search tasks...">
+                <select id="filterBy">
+                    <option value="all">All</option>
+                    <option value="high">High Only</option>
+                    <option value="medium">Medium Only</option>
+                    <option value="low">Low Only</option>
+                </select>
+            </div>
+        </header>
+
+        <div id="tasksGrid" class="grid-view">
+         
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
